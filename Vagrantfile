@@ -4,7 +4,7 @@ Vagrant::Config.run do |config|
   # please see the online documentation at vagrantup.com.
 
   # Every Vagrant virtual environment requires a box to build off of.
-  config.vm.box = "lucid64_chef"
+  config.vm.box = "lucid64"
 
   # The url from where the 'config.vm.box' box will be fetched if it
   # doesn't already exist on the user's system.
@@ -29,13 +29,19 @@ Vagrant::Config.run do |config|
   # Enable provisioning with chef solo, specifying a cookbooks path (relative
   # to this Vagrantfile), and adding some recipes and/or roles.
   #
-  # config.vm.provisioner = :chef_solo
-  # config.chef.cookbooks_path = "cookbooks"
+  config.vm.provisioner = :chef_solo
+  config.chef.cookbooks_path = %w[cookbooks opscode-cookbooks]
   # config.chef.add_recipe "mysql"
   # config.chef.add_role "web"
   #
   # You may also specify custom JSON attributes:
-  # config.chef.json = { :mysql_password => "foo" }
+  # Java runtime hack to avoid bugs in opscode's tomcat6 cookbook, and ohai..
+  config.chef.json = {:languages => 
+    {:java => 
+      {:runtime => {:name => "Java(TM) SE Runtime Environment", :build => "1.6.0_20-b02"},
+       :hotspot => {:name => "Java HotSpot(TM) 64-Bit Server VM", :build => "16.3-b01, mixed mode"}
+      }}}
+  config.chef.add_recipe "vagrant_main"
 
   # Enable provisioning with chef server, specifying the chef server URL,
   # and the path to the validation key (relative to this Vagrantfile).

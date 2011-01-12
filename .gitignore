@@ -1,0 +1,22 @@
+pom.xml
+*jar
+lib
+classes
+.bundle
+.vagrant
+
+
+## EMACS
+*~
+\#*
+.\#*
+.dir-locals.el
+
+## VIM
+*.sw?
+
+## TM
+*.tmproj
+
+## OSx
+.DS_Store
