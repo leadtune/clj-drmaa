@@ -7,9 +7,9 @@ For more information about the underlying Java DRMAA libraries start [here][java
   
   TODO
 
-## How to test and/or experiment with clj-drmma
+## How to test and/or experiment with clj-drmaa
 
-To test (just manually so far) clj-drmma I'm using [vagrant](http://vagrantup.com) to create a VM running ubuntu and SGE standalone.
+To test (just manually so far) clj-drmaa I'm using [vagrant](http://vagrantup.com) to create a VM running ubuntu and SGE standalone.
 You can do the same, after you setup vagrant, with the following commands:
 
 
