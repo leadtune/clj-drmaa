@@ -32,8 +32,7 @@ Once you have verified that SGE is working properly fire up a repl to play with 
 The above command will block until all the jobs have been processed.  Once done you will find that the homedir (`~/`)
 has been littered with all of the jobs output from above.
 
-To use slime on your local (host) box to connect to the guest's swank you need to use SSH
-to tunnel the port:
+To use slime on your local (host) box you can connect to the guest's swank using SSH to forward the port:
 
     guest-box $ cd /vagrant
     guest-box $ ./with-sge lein swank
