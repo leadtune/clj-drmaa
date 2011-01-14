@@ -9,4 +9,7 @@ require_recipe "java"
 
 require_recipe "lein"
 require_recipe "sge-standalone"
+%w[libdrmaa-dev libdrmaa-java].each do |p|
+  package p
+end
 
