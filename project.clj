@@ -1,4 +1,4 @@
-(defproject clj-drmaa "1.0.0-SNAPSHOT"
+(defproject clj-drmaa "0.1.0"
   :description "drmaa client"
   :repositories {"leadtune-repo" "http://c0026236.cdn1.cloudfiles.rackspacecloud.com/repo"}
   :dependencies [[org.clojure/clojure "1.2.0"]
